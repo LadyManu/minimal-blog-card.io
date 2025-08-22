@@ -1,0 +1,156 @@
+/*CSS STYLE SHEET FOR MINIMAL BLOG CARD*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Main content styles */
+body {
+    background-color: #E5EAF0;
+    padding: 1rem;
+}
+
+/*FONT IMPORT*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #E5EAF0;
+    font-family: 'Sora', sans-serif;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-height: 100vh;        
+    padding: 1rem;            
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.card {
+    width: 23rem;            
+    background: #FFFFFF;
+    border-radius: 1rem; 
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.05);
+    margin: 0 auto;
+}
+
+.card-image {
+    width: calc(100% - 2rem);
+    height: 12rem;             
+    margin: 1rem;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+.card-image:hover img {
+  transform: scale(0.98);
+}
+.category {
+  display: inline-block;
+  font-size: 0.625rem;             
+  font-weight: 600;
+  font-family: 'Sora', sans-serif;
+  color: #7C19EE;
+  padding: 0.375rem 1rem;          
+  background-color: #E5EAF0;
+  text-align: center;
+  border-radius: 0.625rem;         
+  margin: 1rem 0 0 1rem;           
+}
+
+.heading {
+  font-size: 1.125rem;              
+  font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  color: #20293A;
+  margin: 1rem 1rem 0.375rem;      
+  line-height: 1.4;
+}
+
+.text {
+  font-size: 0.875rem;              
+  font-family: 'Sora', sans-serif;
+  color: #394150;
+  font-weight: 250;
+  margin: 0 1rem 1.25rem;        
+  white-space: pre-line;          
+  line-height: calc(0.875rem + 0.375rem); 
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #E5EAF0;
+  width: calc(100% - 2rem);         
+  margin: 0 auto 0.75rem;           
+  display: block;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size:  0.75rem;             
+  margin: 0 1rem 1.25rem;           
+}
+
+.name {
+  font-weight: 600;
+}
+
+.author-info {
+    font-size: 0.875rem;
+    color: #394150;
+    text-align: left;
+    padding: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+}
+
+.author-info a {
+    color: #7C19EE;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.author-info a:hover {
+  text-decoration: underline;
+   cursor: pointer;
+}
+
+/*MEDIA*/
+
+@media screen and (max-width: 480px) {
+    html { font-size: 14px; }
+    body { padding: 0.5rem; }
+    .card { width: 100%; }
+    .card-image { width: calc(100% - 1rem); height: 10rem; margin: 0.5rem; }
+    .category { margin: 0.5rem 0 0 0.5rem; padding: 0.25rem 0.75rem; }
+    .heading { font-size: 1rem; margin: 0.75rem 0.5rem 0.25rem; }
+    .text { font-size: 0.75rem; margin: 0 0.5rem 1rem; line-height: calc(0.75rem + 0.375rem); }
+    .divider { width: calc(100% - 1rem); margin: 0 auto 0.5rem; }
+    .author { font-size: 0.625rem; margin: 0 0.5rem 1rem; }
+    .author-info { font-size: 0.75rem; text-align: center; padding: 0.75rem; }
+}
+
+@media screen and (max-width: 768px) {
+    html { font-size: 15px; }
+    .card { width: 95%; }
+    .card-image { height: 11rem; } 
+    .heading { font-size: 1.0625rem; }
+}
+
+@media screen and (min-width: 1025px) {
+    .card { width: 23rem; }
+    .card-image { height: 12rem; }
+}
